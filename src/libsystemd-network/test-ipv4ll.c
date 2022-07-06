@@ -186,7 +186,7 @@ static void test_basic_request(sd_event *e, const struct in_addr *start_address)
 }
 
 int main(int argc, char *argv[]) {
-        struct in_addr start_address = { 0x0001FEA9 };
+        struct in_addr start_address = { 0x0201FEA9 };
         _cleanup_(sd_event_unrefp) sd_event *e = NULL;
 
         test_setup_logging(LOG_DEBUG);

@@ -276,7 +276,7 @@ static int ipv4ll_start_internal(sd_ipv4ll *ll, const struct in_addr *start_addr
 
         if (reset_generation) {
                 ll->seed.generation = 0;
-                if (start_address) {
+                if (start_address && start_address->s_addr != 0) {
                         r = sd_ipv4ll_set_address(ll, start_address);
                         if (r < 0)
                                 return r;
